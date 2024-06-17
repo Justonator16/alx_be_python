@@ -6,6 +6,6 @@ difference = number1 + number2
 product = number2 * number1
 
 print("Addition of 10 and 5 is ",sum)
-print("Subtraction of 10 and 5 is ",sum)
-print("Multiplication of 10 and 5 is ",sum)
+print("Subtraction of 10 and 5 is ",difference)
+print("Multiplication of 10 and 5 is ",product)
 
