@@ -11,5 +11,3 @@ def perform_operation(num1,num2,operation):
             return "Cant divide by 0"
         return num1/num2
     return "Invalid Operation "
-
-perform_operation()
