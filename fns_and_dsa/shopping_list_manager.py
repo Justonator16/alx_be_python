@@ -25,12 +25,12 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            user_input = input("Enter a name of item: ")
+            user_input = input("Enter the item to add: ")
             add_item(user_input ,shopping_list)
             # Prompt for and add an item
             pass
         elif choice == '2':
-            user_input = input("Enter name of item you want to remove: ")
+            user_input = input("Enter the item to remove: ")
             remove_item(user_input ,shopping_list)
             # Prompt for and remove an item
             pass
