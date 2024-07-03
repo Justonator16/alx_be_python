@@ -17,6 +17,9 @@ type_of_temperature = input("Is this temperature in Celsius or Fahrenheit? (C/F)
 if temperature.isnumeric() == False:
     print("Invalid temperature. Please enter a numeric value.")
 
+# Makes the string into a valid number
+temperature = int(temperature)
+
 if type_of_temperature == "F":
     print(convert_to_celsius(temperature))
 elif type_of_temperature == "C":
