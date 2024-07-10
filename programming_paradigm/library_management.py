@@ -35,9 +35,9 @@ class Library:
 
         #         self.books.append(book)
         #         self.checkouts.pop(i)
-
-        self.books.append(self.checkouts[0])
-        self.checkouts.pop(0)
+        if self.books == True:
+            self.books.append(self.checkouts[0])
+            self.checkouts.pop(0)
 
     def list_available_books(self):
         for i in self.books:
