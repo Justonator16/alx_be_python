@@ -1,13 +1,6 @@
 class Test:
-    def __init__(self):
-        pass
     def return_book(self):
         return True
-
-class Checker:
-    def __init__(self, _books):
-        self._books = []
-        self._books.append("Checker")
         
 class Book:
     def __init__(self, title, author):
@@ -18,27 +11,28 @@ class Book:
         return f"{self.title} by {self.author}"
     
 class Library:     
-    def __init__(self, books = {}, checkouts = {}):
-        self.books = books
-        self.checkouts = checkouts
+    def __init__(self):
+        self._books = []
+        self._books = {}
+        self.checkouts = {}
 
     def add_book(self,title_and_book):
         title_book_dict = {title_and_book.title: title_and_book.author}
-        self.books.update(title_book_dict)
+        self._books.update(title_book_dict)
 
     def check_out_book(self, title):
-        if title in self.books:
-            title_book_dict = {title: self.books[title]}
+        if title in self._books:
+            title_book_dict = {title: self._books[title]}
             self.checkouts.update(title_book_dict)
-            self.books.pop(title)
+            self._books.pop(title)
     
     def return_book(self, title):
         if title in self.checkouts:
             title_book_dict = {title : self.checkouts[title] }
-            self.books.update(title_book_dict)
+            self._books.update(title_book_dict)
             self.checkouts.pop(title)
 
     def list_available_books(self):
-        for i in self.books:
-            checker_text = f"{i} by {self.books[i]}"
+        for i in self._books:
+            checker_text = f"{i} by {self._books[i]}"
             print(checker_text)
