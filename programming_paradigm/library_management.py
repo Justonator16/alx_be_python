@@ -1,11 +1,10 @@
-class Test:
-    def return_book(self):
-        return True
-        
 class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
+
+    def return_book(self):
+        return True
 
     def __str__(self):
         return f"{self.title} by {self.author}"
@@ -27,12 +26,14 @@ class Library:
             self._books.pop(title)
     
     def return_book(self, title):
-        if title in self.checkouts:
+        book_in_checkouts = title in self.checkouts
+        if book_in_checkouts == True:
             title_book_dict = {title : self.checkouts[title] }
             self._books.update(title_book_dict)
             self.checkouts.pop(title)
 
     def list_available_books(self):
-        for i in self._books:
-            checker_text = f"{i} by {self._books[i]}"
-            print(checker_text)
+        for book_title in self._books:
+            output_text = []
+            output_text.append(book_title + " by "+ self._books[book_title])
+            print("".join(output_text))
