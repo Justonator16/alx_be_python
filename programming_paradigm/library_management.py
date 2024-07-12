@@ -1,9 +1,13 @@
 class Test:
     def __init__(self):
         pass
-
     def return_book(self):
         return True
+
+class Checker:
+    def __init__(self, _books):
+        self._books = []
+        self._books.append("Checker")
         
 class Book:
     def __init__(self, title, author):
