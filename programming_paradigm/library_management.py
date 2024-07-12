@@ -1,6 +1,9 @@
 class Test:
     def __init__(self):
         pass
+
+    def return_book(self):
+        return True
         
 class Book:
     def __init__(self, title, author):
